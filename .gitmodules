@@ -1,0 +1,4 @@
+[submodule "external/Doughnut"]
+	path = external/Doughnut
+	url = https://github.com/TheMejmun/Doughnut
+	branch = static-library
