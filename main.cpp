@@ -10,7 +10,7 @@ int main() {
 #endif
 
     dn::Window window{"Hello World"};
-    dn::RendererV2 renderer{&window, "Hello World"};
+    dn::RendererV2 renderer{window, "Hello World"};
 
     return 0;
 }
