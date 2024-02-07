@@ -5,7 +5,6 @@
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    auto test = Doughnut::importMesh("");
     Doughnut::Window window{"Hello World"};
     Doughnut::RendererV2 renderer{&window, "Hello World"};
 
