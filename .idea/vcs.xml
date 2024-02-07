@@ -3,12 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/Doughnut" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/assimp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/glfw" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/glm" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/imgui" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/stb" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/vulkan-headers" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/vcpkg" vcs="Git" />
   </component>
 </project>
