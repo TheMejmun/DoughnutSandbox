@@ -1,7 +1,7 @@
 [submodule "external/Doughnut"]
 	path = external/Doughnut
 	url = https://github.com/TheMejmun/Doughnut
-	branch = static-library
+	branch = dev
 [submodule "external/vcpkg"]
 	path = external/vcpkg
 	url = https://github.com/Microsoft/vcpkg.git
