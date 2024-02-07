@@ -5,8 +5,8 @@
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    Doughnut::Window window{"Hello World"};
-    Doughnut::RendererV2 renderer{&window, "Hello World"};
+    dn::Window window{"Hello World"};
+    dn::RendererV2 renderer{&window, "Hello World"};
 
     return 0;
 }
