@@ -2,6 +2,7 @@
 #include "util/importer.h"
 #include "graphics/renderer_v2.h"
 #include "util/timer.h"
+#include "io/input_manager.h"
 
 int main() {
 #ifndef NDEBUG
@@ -11,6 +12,7 @@ int main() {
 #endif
 
     dn::Window window{"Hello World"};
+    InputController im{window.mGlfwWindow};
     dn::RendererV2 renderer{window};
 
     dn::Time lastTimestamp = dn::now();
@@ -19,6 +21,8 @@ int main() {
         dn::Time time = dn::now();
         delta = dn::duration(lastTimestamp, time);
         lastTimestamp = time;
+
+        im.update();
 
         renderer.drawFrame(delta);
     }
