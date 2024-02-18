@@ -11,7 +11,7 @@ int main() {
     dn::log::init(true, false, false, true);
 #endif
 
-    dn::Window window{"Hello World"};
+    dn::Window window{"Hello World", 640, 400, false};
     InputController im{window.mGlfwWindow};
     dn::RendererV2 renderer{window};
 
