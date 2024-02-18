@@ -3,7 +3,6 @@
 #include "graphics/renderer_v2.h"
 #include "util/timer.h"
 #include "io/input_manager.h"
-#include "graphics/color_v2.h"
 
 int main() {
 #ifndef NDEBUG
@@ -11,10 +10,6 @@ int main() {
 #else
     dn::log::init(true, false, false, true);
 #endif
-
-    dn::Color<dn::CIELAB> color(1.0f, 1.0f, 1.0f);
-    dn::log::i(color.toString());
-    return 0;
 
     dn::Window window{"Hello World"};
     InputController im{window.mGlfwWindow};
