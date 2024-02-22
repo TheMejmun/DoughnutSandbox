@@ -6,7 +6,7 @@
 
 int main() {
 #ifndef NDEBUG
-    dn::log::init(true, true, false, true);
+    dn::log::init(true, true, true, true);
 #else
     dn::log::init(true, false, false, true);
 #endif
