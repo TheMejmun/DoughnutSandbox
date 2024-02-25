@@ -1,8 +1,10 @@
-#include <iostream>
+
 #include "util/importer.h"
 #include "graphics/renderer_v2.h"
 #include "util/timer.h"
 #include "io/input_manager.h"
+
+#include <iostream>
 
 int main() {
 #ifndef NDEBUG
