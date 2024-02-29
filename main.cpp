@@ -3,6 +3,7 @@
 #include "graphics/renderer_v2.h"
 #include "util/timer.h"
 #include "io/input_manager.h"
+#include "imgui.h"
 
 #include <iostream>
 
@@ -26,6 +27,7 @@ int main() {
 
         im.update();
 
+        ImGui::ShowDemoWindow();
         renderer.drawFrame(delta);
     }
 
