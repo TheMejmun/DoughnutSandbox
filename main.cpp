@@ -5,8 +5,6 @@
 #include "io/input_manager.h"
 #include "imgui.h"
 
-#include <iostream>
-
 int main() {
 #ifndef NDEBUG
     dn::log::init(true, true, true, true);
