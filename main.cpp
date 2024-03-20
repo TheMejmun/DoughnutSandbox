@@ -6,7 +6,6 @@
 #include "imgui.h"
 
 
-
 int main() {
 #ifndef NDEBUG
     dn::log::init(true, true, true, true);
@@ -15,9 +14,7 @@ int main() {
 #endif
 
     dn::Window window{"Hello World", 800, 600, true};
-    std::cin;
-    return 0;
-    InputController im{(GLFWwindow*) window.mHandle};
+    //InputController im{(GLFWwindow*) window.mHandle};
     dn::RendererV2 renderer{window};
 
     dn::Time lastTimestamp = dn::now();
@@ -27,9 +24,10 @@ int main() {
         delta = dn::duration(lastTimestamp, time);
         lastTimestamp = time;
 
-        im.update();
+        window.poll();
+        //im.update();
 
-        ImGui::ShowDemoWindow();
+//        ImGui::ShowDemoWindow();
         renderer.drawFrame(delta);
     }
 
