@@ -5,7 +5,6 @@
 #include "io/input_manager.h"
 #include "imgui.h"
 
-
 int main() {
 #ifndef NDEBUG
     dn::log::init(true, true, true, true);
@@ -15,7 +14,10 @@ int main() {
 
     dn::Window window{"Hello World", 800, 600, true};
     //InputController im{(GLFWwindow*) window.mHandle};
+    dn::log::i("Test");
     dn::RendererV2 renderer{window};
+
+    dn::FPSCounter fps{};
 
     dn::Time lastTimestamp = dn::now();
     double delta;
@@ -24,11 +26,15 @@ int main() {
         delta = dn::duration(lastTimestamp, time);
         lastTimestamp = time;
 
+        fps.update(delta);
+        dn::log::i("FPS:", fps.currentFPS());
+
         window.poll();
         //im.update();
 
 //        ImGui::ShowDemoWindow();
         renderer.drawFrame(delta);
+
     }
 
     return 0;
