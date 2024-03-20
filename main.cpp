@@ -15,7 +15,9 @@ int main() {
 #endif
 
     dn::Window window{"Hello World", 800, 600, true};
-    InputController im{window.mGlfwWindow};
+    std::cin;
+    return 0;
+    InputController im{(GLFWwindow*) window.mHandle};
     dn::RendererV2 renderer{window};
 
     dn::Time lastTimestamp = dn::now();
