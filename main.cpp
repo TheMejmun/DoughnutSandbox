@@ -2,7 +2,6 @@
 #include "util/importer.h"
 #include "graphics/renderer_v2.h"
 #include "util/timer.h"
-#include "io/input_manager.h"
 #include "imgui.h"
 
 int main() {
@@ -13,7 +12,6 @@ int main() {
 #endif
 
     dn::Window window{"Hello World", 800, 600, true};
-    //InputController im{(GLFWwindow*) window.mHandle};
     dn::log::i("Test");
     dn::RendererV2 renderer{window};
 
@@ -30,11 +28,8 @@ int main() {
         dn::log::i("FPS:", fps.currentFPS());
 
         window.poll();
-        //im.update();
 
-//        ImGui::ShowDemoWindow();
         renderer.drawFrame(delta);
-
     }
 
     return 0;
