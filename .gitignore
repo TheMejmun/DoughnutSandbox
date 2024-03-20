@@ -37,4 +37,9 @@
 # CMake
 cmake-build-*/
 build/
+
+# MacOS
 .DS_Store
+
+# vcpkg
+vcpkg_installed/
