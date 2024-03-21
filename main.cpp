@@ -1,8 +1,35 @@
 
-#include "util/importer.h"
-#include "graphics/renderer_v2.h"
+#include "io/window.h"
+#include "graphics/render_api.h"
+#include "graphics/renderable.h"
 #include "util/timer.h"
-#include "imgui.h"
+
+class Renderer {
+public:
+    explicit Renderer(dn::Window &window) : mAPI(window) {}
+
+    void drawFrame(double delta) {
+        mAPI.nextImage();
+        mAPI.startRecording();
+        mAPI.beginRenderPass();
+        mAPI.recordDraw(mRenderable);
+        mAPI.recordUiDraw();
+        mAPI.endRenderPass();
+        mAPI.endRecording();
+        mAPI.drawFrame(delta);
+    }
+
+private:
+    dn::VulkanAPI mAPI;
+
+    dn::Renderable mRenderable{
+            "resources/textures/debug.png",
+            "resources/shaders/quad.vert.spv",
+            "resources/shaders/quad.frag.spv",
+            "resources/models/quad.glb",
+            {}
+    };
+};
 
 int main() {
 #ifndef NDEBUG
@@ -13,7 +40,7 @@ int main() {
 
     dn::Window window{"Hello World", 800, 600, true};
     dn::log::i("Test");
-    dn::RendererV2 renderer{window};
+    Renderer renderer{window};
 
     dn::FPSCounter fps{};
 
@@ -25,7 +52,6 @@ int main() {
         lastTimestamp = time;
 
         fps.update(delta);
-        dn::log::i("FPS:", fps.currentFPS());
 
         window.poll();
 
