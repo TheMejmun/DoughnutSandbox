@@ -7,20 +7,6 @@
       "name": "assimp"
     },
     {
-      "name": "sdl2",
-      "features": [
-        "vulkan"
-      ]
-    },
-    {
-      "name": "imgui",
-      "features": [
-        "sdl2-binding",
-        "vulkan-binding",
-        "docking-experimental"
-      ]
-    },
-    {
       "name": "stb"
     }
   ]
