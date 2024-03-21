@@ -3,6 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/Doughnut" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/external/Doughnut/external/sdl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/vcpkg" vcs="Git" />
   </component>
 </project>
