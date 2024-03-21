@@ -39,7 +39,6 @@ int main() {
 #endif
 
     dn::Window window{"Hello World", 800, 600, true};
-    dn::log::i("Test");
     Renderer renderer{window};
 
     dn::FPSCounter fps{};
