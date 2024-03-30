@@ -24,8 +24,8 @@ private:
 
     dn::Renderable mRenderable{
             "resources/textures/debug.png",
-            "resources/shaders/quad.vert.spv",
-            "resources/shaders/quad.frag.spv",
+            "resources/shaders/quad.vert",
+            "resources/shaders/quad.frag",
             "resources/models/quad.glb",
             {}
     };
