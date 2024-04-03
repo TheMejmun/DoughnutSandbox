@@ -23,7 +23,7 @@ private:
     dn::VulkanAPI mAPI;
 
     dn::Renderable mRenderable{
-            "resources/textures/debug.png",
+            dn::Texture("resources/textures/debug.png"),
             "resources/shaders/quad.vert",
             "resources/shaders/quad.frag",
             "resources/models/quad.glb",
